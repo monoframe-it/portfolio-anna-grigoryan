@@ -4,33 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna | Shopify Developer & Web Designer — Monofram-it</title>
-    <meta name="description" content="Portfolio of Anna (Monofram-it), beginner Shopify Developer & Web Designer based in Yerevan, Armenia.">
+    <meta name="description" content="Portfolio of Anna (Monofram-it), Shopify Developer & Web Designer based in Yerevan, Armenia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ==========================================================================
-           Variables & Theme Settings (Dark Luxury Aesthetic)
-           ========================================================================== */
+        /* Barbershop-inspired Dark Luxury Color Scheme */
         :root {
-            --bg-color: #0D0D0E;
-            --panel-color: #141416;
-            --panel-hover: #1A1A1E;
-            --text-main: #FFFFFF;
-            --text-muted: #A0A0A5;
+            --bg-color: #111111;
+            --panel-color: #1C1C1C;
+            --text-main: #F5F0E8;
+            --text-muted: #A5A5A5;
             --accent-gold: #B58A55;
             --accent-gold-hover: #D4AB76;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-gold: rgba(181, 138, 85, 0.3);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --font-heading: 'Playfair Display', serif;
-            --font-sans: 'Montserrat', sans-serif;
+            --border-color: #ffffff16;
+            --border-gold: rgba(181, 138, 85, 0.4);
+            --transition: all 0.3s ease;
+            --font-heading: 'Oswald', sans-serif;
+            --font-sans: 'DM Sans', sans-serif;
         }
 
-        /* ==========================================================================
-           Reset & Base Styles
-           ========================================================================== */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -39,14 +33,14 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+            scroll-padding-top: 85px;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: var(--font-sans);
-            line-height: 1.7;
+            line-height: 1.8;
             font-size: 15px;
             overflow-x: hidden;
         }
@@ -57,11 +51,7 @@
             transition: var(--transition);
         }
 
-        ul {
-            list-style: none;
-        }
-
-        img {
+        img, video {
             max-width: 100%;
             height: auto;
             display: block;
@@ -75,7 +65,7 @@
         }
 
         .container {
-            width: min(1200px, 90%);
+            width: min(1220px, calc(100% - 44px));
             margin: 0 auto;
         }
 
@@ -85,12 +75,10 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* ==========================================================================
-           Typography & Shared Components
-           ========================================================================== */
         h1, h2, h3, h4, .brand-name {
             font-family: var(--font-heading);
-            font-weight: 600;
+            font-weight: 500;
+            text-transform: uppercase;
         }
 
         .gold-text {
@@ -98,11 +86,11 @@
         }
 
         .section {
-            padding: 100px 0;
+            padding: 115px 0;
         }
 
         .section-header {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-header.center {
@@ -113,24 +101,26 @@
         }
 
         .section-tag {
-            display: inline-block;
+            display: block;
             color: var(--accent-gold);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
 
         .section-title {
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1.2;
-            margin-bottom: 15px;
+            font-size: clamp(36px, 5vw, 64px);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
         }
 
         .section-desc {
             color: var(--text-muted);
             font-size: 15px;
+            line-height: 1.8;
         }
 
         /* Buttons */
@@ -138,25 +128,26 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 14px 28px;
-            font-size: 12px;
-            font-weight: 600;
+            gap: 12px;
+            min-height: 49px;
+            padding: 15px 28px;
+            border: 1px solid var(--accent-gold);
+            font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            border-radius: 4px;
-            transition: var(--transition);
+            transition: background 0.25s, color 0.25s, transform 0.25s;
         }
 
         .btn-gold {
             background-color: var(--accent-gold);
-            color: var(--bg-color);
+            color: #111;
         }
 
         .btn-gold:hover {
             background-color: var(--accent-gold-hover);
+            border-color: var(--accent-gold-hover);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(181, 138, 85, 0.2);
         }
 
         .btn-outline {
@@ -166,46 +157,46 @@
         }
 
         .btn-outline:hover {
-            border-color: var(--accent-gold);
             color: var(--accent-gold);
-            background: rgba(181, 138, 85, 0.05);
+            background: rgba(181, 138, 85, 0.08);
+            border-color: var(--accent-gold);
             transform: translateY(-2px);
         }
 
         .btn-gold-outline {
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
-            padding: 8px 20px;
+            padding: 10px 22px;
             font-size: 11px;
         }
 
         .btn-gold-outline:hover {
             background: var(--accent-gold);
-            color: var(--bg-color);
+            color: #111;
         }
 
         .btn-sm {
-            padding: 8px 14px;
-            font-size: 11px;
+            min-height: 38px;
+            padding: 8px 16px;
+            font-size: 10px;
         }
 
-        /* Header & Navigation */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
-            background: rgba(13, 13, 14, 0.85);
-            backdrop-filter: blur(12px);
+            z-index: 100;
+            background: rgba(17, 17, 17, 0.92);
+            backdrop-filter: blur(18px);
             border-bottom: 1px solid var(--border-color);
-            transition: var(--transition);
         }
 
         .nav-container {
-            width: min(1200px, 90%);
+            width: min(1220px, calc(100% - 44px));
             margin: 0 auto;
-            height: 85px;
+            height: 82px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -217,30 +208,31 @@
         }
 
         .brand-name {
-            font-size: 20px;
-            letter-spacing: 3px;
-            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 2px;
+            line-height: 1.1;
         }
 
         .brand-sub {
-            font-size: 9px;
+            font-size: 8px;
             letter-spacing: 4px;
-            color: var(--accent-gold);
+            color: var(--text-muted);
             text-transform: uppercase;
-            font-weight: 600;
+            font-family: var(--font-sans);
+            margin-top: 4px;
         }
 
         .nav-menu {
             display: flex;
-            gap: 32px;
+            gap: 28px;
             align-items: center;
         }
 
         .nav-link {
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
+            letter-spacing: 1.2px;
+            color: #ddd;
             font-weight: 500;
         }
 
@@ -267,34 +259,21 @@
             width: 100%;
             height: 2px;
             background-color: var(--text-main);
-            transition: var(--transition);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero-section {
             position: relative;
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding-top: 120px;
-            padding-bottom: 80px;
-            overflow: hidden;
-        }
-
-        .hero-bg-glow {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(181, 138, 85, 0.12) 0%, rgba(13, 13, 14, 0) 70%);
-            z-index: -1;
-            pointer-events: none;
+            padding-top: 130px;
+            padding-bottom: 90px;
+            background: radial-gradient(circle at 50% 20%, rgba(181, 138, 85, 0.08) 0%, rgba(17, 17, 17, 0) 70%);
         }
 
         .hero-container {
-            max-width: 850px;
+            max-width: 950px;
             margin: 0 auto;
             text-align: center;
         }
@@ -303,42 +282,44 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 8px 18px;
+            padding: 8px 20px;
             background: var(--panel-color);
             border: 1px solid var(--border-color);
-            border-radius: 50px;
-            font-size: 12px;
-            color: var(--text-muted);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
             margin-bottom: 30px;
         }
 
         .hero-badge .dot {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             background-color: var(--accent-gold);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-gold);
         }
 
         .hero-title {
-            font-size: clamp(38px, 6vw, 68px);
-            line-height: 1.15;
+            font-size: clamp(42px, 7vw, 84px);
+            line-height: 1.05;
+            letter-spacing: -1px;
             margin-bottom: 25px;
         }
 
         .hero-subtitle {
             font-size: clamp(15px, 1.8vw, 18px);
             color: var(--text-muted);
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto 30px;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .hero-tagline {
             font-family: var(--font-heading);
-            font-style: italic;
             color: var(--accent-gold);
-            font-size: 20px;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             margin-bottom: 40px;
         }
 
@@ -349,11 +330,11 @@
             flex-wrap: wrap;
         }
 
-        /* About Me Section */
+        /* About Me */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
+            gap: 75px;
             align-items: center;
         }
 
@@ -362,46 +343,43 @@
         }
 
         .image-wrapper {
-            border-radius: 8px;
-            overflow: hidden;
             border: 1px solid var(--border-gold);
-            height: 480px;
+            height: 520px;
+            overflow: hidden;
         }
 
         .image-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: transform 0.7s ease;
         }
 
-        .image-wrapper img:hover {
-            transform: scale(1.03);
+        .image-wrapper:hover img {
+            transform: scale(1.04);
         }
 
         .about-card-badge {
             position: absolute;
-            bottom: -20px;
-            right: -20px;
-            background: var(--panel-color);
+            bottom: 20px;
+            right: 20px;
+            background: #111;
             border: 1px solid var(--border-gold);
             padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            text-transform: uppercase;
         }
 
         .about-card-badge span {
             display: block;
             font-family: var(--font-heading);
-            font-size: 18px;
+            font-size: 20px;
             color: var(--accent-gold);
         }
 
         .about-card-badge small {
             color: var(--text-muted);
-            font-size: 11px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 9px;
+            letter-spacing: 2px;
         }
 
         .about-lead {
@@ -409,12 +387,13 @@
             color: var(--text-main);
             font-weight: 500;
             margin-bottom: 20px;
+            line-height: 1.8;
         }
 
         .about-content p {
             color: var(--text-muted);
-            margin-bottom: 16px;
-            line-height: 1.8;
+            margin-bottom: 20px;
+            line-height: 1.9;
         }
 
         .about-highlights {
@@ -428,11 +407,11 @@
 
         .highlight-item strong {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--accent-gold);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
         }
 
         .highlight-item span {
@@ -440,55 +419,53 @@
             color: var(--text-main);
         }
 
-        /* Skills Section */
+        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
+            gap: 22px;
         }
 
         .skill-card {
             background: var(--bg-color);
             border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 8px;
+            padding: 32px;
             transition: var(--transition);
         }
 
         .skill-card:hover {
             border-color: var(--accent-gold);
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
         .skill-icon {
             font-size: 32px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .skill-card h3 {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 10px;
+            letter-spacing: 0.5px;
         }
 
         .skill-card p {
             color: var(--text-muted);
             font-size: 13px;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* Services Section */
+        /* Services */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
         }
 
         .service-card {
             background: var(--panel-color);
             border: 1px solid var(--border-color);
-            padding: 40px 30px;
-            border-radius: 8px;
+            padding: 40px;
             transition: var(--transition);
         }
 
@@ -499,9 +476,8 @@
 
         .service-num {
             font-family: var(--font-heading);
-            font-size: 36px;
-            color: rgba(181, 138, 85, 0.2);
-            font-weight: 700;
+            font-size: 32px;
+            color: var(--accent-gold);
             margin-bottom: 15px;
             display: block;
         }
@@ -513,21 +489,20 @@
 
         .service-card p {
             color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.8;
+            font-size: 13px;
+            line-height: 1.85;
         }
 
-        /* Projects Section */
+        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .project-card {
             background: var(--panel-color);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -537,11 +512,10 @@
         .project-card:hover {
             border-color: var(--accent-gold);
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
         .project-image {
-            height: 220px;
+            height: 230px;
             position: relative;
             overflow: hidden;
         }
@@ -550,7 +524,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: transform 0.7s ease;
         }
 
         .project-card:hover .project-image img {
@@ -564,30 +538,29 @@
             background: var(--bg-color);
             color: var(--accent-gold);
             border: 1px solid var(--border-gold);
-            padding: 5px 12px;
+            padding: 6px 12px;
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 4px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .project-content {
-            padding: 25px;
+            padding: 28px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .project-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 12px;
         }
 
         .project-content p {
             color: var(--text-muted);
             font-size: 13px;
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 20px;
             flex-grow: 1;
         }
@@ -596,7 +569,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .project-tech span {
@@ -604,31 +577,87 @@
             color: var(--text-muted);
             padding: 4px 10px;
             font-size: 11px;
-            border-radius: 4px;
             border: 1px solid var(--border-color);
         }
 
         .project-actions {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             flex-wrap: wrap;
-            padding-top: 15px;
+            padding-top: 18px;
             border-top: 1px solid var(--border-color);
         }
 
-        /* My Process Section */
+        .status-badge {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 14px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Video Showcase Section */
+        .video-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--panel-color);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .video-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-4px);
+        }
+
+        .video-wrapper {
+            position: relative;
+            height: 320px;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-info {
+            padding: 24px;
+        }
+
+        .video-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .video-info p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Process */
         .process-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 24px;
+            gap: 22px;
         }
 
         .process-step {
             background: var(--panel-color);
             border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 8px;
+            padding: 32px;
             transition: var(--transition);
         }
 
@@ -639,46 +668,45 @@
 
         .step-num {
             font-family: var(--font-heading);
-            font-size: 28px;
+            font-size: 32px;
             color: var(--accent-gold);
-            font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: block;
         }
 
         .process-step h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
         .process-step p {
             color: var(--text-muted);
             font-size: 13px;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* Contact Section */
+        /* Contact */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
+            gap: 75px;
         }
 
         .contact-info h3 {
-            font-size: 26px;
+            font-size: 28px;
             margin-bottom: 15px;
         }
 
         .contact-info > p {
             color: var(--text-muted);
-            margin-bottom: 30px;
-            line-height: 1.8;
+            margin-bottom: 35px;
+            line-height: 1.9;
         }
 
         .contact-detail-item {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
+            gap: 18px;
             margin-bottom: 25px;
         }
 
@@ -686,22 +714,22 @@
             font-size: 20px;
             background: var(--bg-color);
             border: 1px solid var(--border-color);
-            width: 45px;
-            height: 45px;
+            width: 48px;
+            height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 6px;
             flex-shrink: 0;
+            color: var(--accent-gold);
         }
 
         .contact-detail-item strong {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--accent-gold);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 3px;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
         }
 
         .contact-detail-item a, .contact-detail-item span {
@@ -716,38 +744,35 @@
         .contact-form-wrapper {
             background: var(--panel-color);
             border: 1px solid var(--border-color);
-            padding: 40px;
-            border-radius: 8px;
+            padding: 42px;
         }
 
         .contact-form h3 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 25px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .form-group label {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--text-muted);
             margin-bottom: 8px;
-            font-weight: 500;
         }
 
         .form-control {
             width: 100%;
             background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            padding: 14px 18px;
+            border: 1px solid #333;
+            padding: 15px 18px;
             color: var(--text-main);
             font-family: inherit;
             font-size: 14px;
-            border-radius: 4px;
             transition: var(--transition);
         }
 
@@ -758,21 +783,20 @@
 
         .form-feedback {
             margin-top: 15px;
-            padding: 12px;
-            border-radius: 4px;
+            padding: 14px;
             font-size: 13px;
             text-align: center;
         }
 
         .form-feedback.success {
-            background: rgba(46, 204, 113, 0.1);
-            border: 1px solid rgba(46, 204, 113, 0.3);
-            color: #2ecc71;
+            background: rgba(181, 138, 85, 0.15);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
         }
 
         /* Footer */
         .footer {
-            background: #080809;
+            background: #0a0a0a;
             border-top: 1px solid var(--border-color);
             padding-top: 80px;
         }
@@ -780,24 +804,24 @@
         .footer-container {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 60px;
+            gap: 60px;
+            padding-bottom: 65px;
         }
 
         .footer-brand p {
-            color: var(--text-muted);
-            font-size: 13px;
-            margin-top: 15px;
-            font-style: italic;
             color: var(--accent-gold);
+            font-size: 12px;
+            margin-top: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .footer h4 {
-            font-size: 14px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--accent-gold);
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .footer-links a, .footer-social a {
@@ -809,14 +833,15 @@
 
         .footer-links a:hover, .footer-social a:hover {
             color: var(--accent-gold);
-            transform: translateX(3px);
         }
 
         .footer-bottom {
             border-top: 1px solid var(--border-color);
             padding: 25px 0;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .footer-bottom .container {
@@ -834,7 +859,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.88);
             backdrop-filter: blur(8px);
             z-index: 2000;
             display: flex;
@@ -857,14 +882,7 @@
             max-height: 90vh;
             overflow-y: auto;
             padding: 40px;
-            border-radius: 8px;
             position: relative;
-            transform: translateY(20px);
-            transition: var(--transition);
-        }
-
-        .modal-backdrop.active .modal-content {
-            transform: translateY(0);
         }
 
         .modal-close {
@@ -873,9 +891,6 @@
             right: 25px;
             font-size: 28px;
             color: var(--text-muted);
-            background: none;
-            border: none;
-            cursor: pointer;
         }
 
         .modal-close:hover {
@@ -883,7 +898,7 @@
         }
 
         .modal-project-title {
-            font-size: 26px;
+            font-size: 28px;
             margin-bottom: 15px;
         }
 
@@ -906,12 +921,10 @@
             color: var(--text-main);
             padding: 6px 14px;
             font-size: 12px;
-            border-radius: 4px;
             border: 1px solid var(--border-color);
         }
 
         .modal-media {
-            border-radius: 6px;
             overflow: hidden;
             margin-bottom: 30px;
             border: 1px solid var(--border-color);
@@ -925,22 +938,17 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .about-grid, .contact-grid, .footer-container {
+            .about-grid, .contact-grid, .footer-container, .video-showcase-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
-            .about-image-card {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-
             .nav-menu {
                 position: fixed;
-                top: 85px;
+                top: 82px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 85px);
+                height: calc(100vh - 82px);
                 background: var(--bg-color);
                 flex-direction: column;
                 justify-content: center;
@@ -972,23 +980,12 @@
 
         @media (max-width: 600px) {
             .section {
-                padding: 70px 0;
+                padding: 75px 0;
             }
 
             .about-highlights {
                 grid-template-columns: 1fr;
                 gap: 15px;
-            }
-
-            .about-card-badge {
-                right: 10px;
-                bottom: -15px;
-                padding: 12px 18px;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
             }
 
             .footer-bottom .container {
@@ -1011,11 +1008,12 @@
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#showcase" class="nav-link">Showcase</a>
                 <a href="#process" class="nav-link">Process</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <div class="nav-actions">
-                <a href="#contact" class="btn btn-gold-outline">Let's Talk</a>
+                <a href="#contact" class="btn btn-gold-outline">Let's Talk ↗</a>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
                     <span></span>
                     <span></span>
@@ -1028,7 +1026,6 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero-section">
-            <div class="hero-bg-glow"></div>
             <div class="container hero-container">
                 <div class="hero-badge">
                     <span class="dot"></span> Yerevan, Armenia · Monofram-it Portfolio
@@ -1043,7 +1040,7 @@
                     “Thoughtful Design. Functional Websites.”
                 </div>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-gold">View My Projects</a>
+                    <a href="#projects" class="btn btn-gold">View My Projects ↗</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
             </div>
@@ -1075,9 +1072,6 @@
                         </p>
                         <p>
                             I believe in continuous learning, attention to detail, and creating websites that look professional and work smoothly across different devices.
-                        </p>
-                        <p>
-                            I’m currently building my portfolio and looking for opportunities to collaborate with businesses and clients on web projects.
                         </p>
                         <div class="about-highlights">
                             <div class="highlight-item">
@@ -1204,7 +1198,7 @@
                 </div>
                 <div class="projects-grid">
                     <!-- Project 1 -->
-                    <div class="project-card" data-project="1">
+                    <div class="project-card">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80" alt="Vinea - Shopify Store">
                             <span class="project-badge">Shopify</span>
@@ -1219,13 +1213,13 @@
                             </div>
                             <div class="project-actions">
                                 <button class="btn btn-sm btn-outline view-details-btn" data-id="1">Details</button>
-                                <a href="https://vinea-wine.myshopify.com/products/h2goo" target="_blank" rel="noopener" class="btn btn-sm btn-gold">Store ↗</a>
+                                <span class="status-badge">Development Phase</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="project-card" data-project="2">
+                    <div class="project-card">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop&q=80" alt="NOIR PUB Website">
                             <span class="project-badge">Web App</span>
@@ -1246,7 +1240,7 @@
                     </div>
 
                     <!-- Project 3 -->
-                    <div class="project-card" data-project="3">
+                    <div class="project-card">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&auto=format&fit=crop&q=80" alt="Barbershop Website">
                             <span class="project-badge">Web App</span>
@@ -1267,7 +1261,7 @@
                     </div>
 
                     <!-- Project 4 -->
-                    <div class="project-card" data-project="4">
+                    <div class="project-card">
                         <div class="project-image">
                             <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&auto=format&fit=crop&q=80" alt="Product Landing Page">
                             <span class="project-badge">Landing Page</span>
@@ -1282,7 +1276,7 @@
                             </div>
                             <div class="project-actions">
                                 <button class="btn btn-sm btn-outline view-details-btn" data-id="4">Details</button>
-                                <a href="https://github.com/Monofram-it" target="_blank" rel="noopener" class="btn btn-sm btn-gold">GitHub ↗</a>
+                                <span class="status-badge">Coming Soon</span>
                             </div>
                         </div>
                     </div>
@@ -1290,11 +1284,75 @@
             </div>
         </section>
 
-        <!-- My Process Section -->
-        <section id="process" class="section process-section">
+        <!-- Video Showcase Section (Interactive Works) -->
+        <section id="showcase" class="section showcase-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">05 / Workflow</span>
+                    <span class="section-tag">05 / Motion & Interactive Works</span>
+                    <h2 class="section-title">Video Showcase</h2>
+                    <p class="section-desc">Short video demonstrations of my custom Shopify layouts, animations, and interactive components.</p>
+                </div>
+                <div class="video-showcase-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoPlay loop muted playsInline>
+                                <source src="https://cdn.shopify.com/videos/c/o/v/7cff733dbef84851bae7066427457387.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Storefront Hero Banner Demo</h3>
+                            <p>High-impact Shopify video background banner designed to capture audience attention instantly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoPlay loop muted playsInline>
+                                <source src="https://cdn.shopify.com/videos/c/o/v/8f7e2caca0a548bdb529c5ec7153ee4b.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Custom Product Showcase Reel</h3>
+                            <p>Dynamic product presentation highlighting brand luxury aesthetic and modern visual flow.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoPlay loop muted playsInline>
+                                <source src="https://cdn.shopify.com/videos/c/o/v/fa945cfd7a77401e92700899a4d8fca3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Interactive Section Animation</h3>
+                            <p>Seamless transition effects and interactive custom Shopify liquid layout section.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoPlay loop muted playsInline>
+                                <source src="https://cdn.shopify.com/videos/c/o/v/22e233a2034743838ef7217d2e96671b.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Brand Atmospheric Experience</h3>
+                            <p>Aesthetic video section created for premium storytelling and luxury product positioning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Process Section -->
+        <section id="process" class="section process-section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">06 / Workflow</span>
                     <h2 class="section-title">My Process</h2>
                     <p class="section-desc">A structured and honest approach to every project I undertake.</p>
                 </div>
@@ -1329,10 +1387,10 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section contact-section dark-bg">
+        <section id="contact" class="section contact-section">
             <div class="container">
                 <div class="section-header center">
-                    <span class="section-tag">06 / Get in Touch</span>
+                    <span class="section-tag">07 / Get in Touch</span>
                     <h2 class="section-title">Let’s Work Together</h2>
                     <p class="section-desc">Have a project in mind or looking to collaborate? Reach out below.</p>
                 </div>
@@ -1342,10 +1400,10 @@
                         <p>Feel free to reach out via email or connect with me on GitHub. I’m eager to discuss freelance opportunities and new projects.</p>
                         
                         <div class="contact-detail-item">
-                            <span class="icon">✉️</span>
+                            <span class="icon">✉</span>
                             <div>
                                 <strong>Email</strong>
-                                <a href="mailto:anna.grigoryann331@mail.ru">anna.grigoryann331@mail.ru</a>
+                                <a href="mailto:anna.grigoryann331@gmail.com">anna.grigoryann331@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-detail-item">
@@ -1363,7 +1421,7 @@
                             </div>
                         </div>
                         <div class="contact-detail-item">
-                            <span class="icon">🗣️</span>
+                            <span class="icon">🗣</span>
                             <div>
                                 <strong>Languages</strong>
                                 <span>Armenian, English, Russian</span>
@@ -1386,7 +1444,7 @@
                                 <label for="message">Your Message</label>
                                 <textarea id="message" name="message" rows="5" class="form-control" placeholder="Tell me about your project..." required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-gold btn-full">Send Message</button>
+                            <button type="submit" class="btn btn-gold btn-full">Send Message ↗</button>
                             <div id="formFeedback" class="form-feedback" style="display: none;"></div>
                         </form>
                     </div>
@@ -1400,8 +1458,7 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <span class="brand-name">ANNA</span>
-                <span class="brand-sub">MONOFRAM-IT</span>
-                <p>Thoughtful Design. Functional Websites.</p>
+                <p>Monofram-it · Thoughtful Design. Functional Websites.</p>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
@@ -1409,12 +1466,13 @@
                 <a href="#skills">Skills</a>
                 <a href="#services">Services</a>
                 <a href="#projects">Projects</a>
+                <a href="#showcase">Showcase</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-social">
                 <h4>Connect</h4>
                 <a href="https://github.com/Monofram-it" target="_blank" rel="noopener">GitHub (Monofram-it)</a>
-                <a href="mailto:anna.grigoryann331@mail.ru">Email Me</a>
+                <a href="mailto:anna.grigoryann331@gmail.com">anna.grigoryann331@gmail.com</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1467,12 +1525,7 @@
                     title: "Vinea — Shopify E-commerce Store",
                     description: "A premium wine e-commerce storefront concept featuring curated collections, product pages, and elegant visual design. Built with Shopify & Liquid.",
                     technologies: ["Shopify", "Liquid", "HTML", "CSS", "AI-Assisted Development"],
-                    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80",
-                    products: [
-                        { name: "H2Goo - Product Page", url: "https://vinea-wine.myshopify.com/products/h2goo" },
-                        { name: "HALLOWEEN 1 - Special Edition", url: "https://vinea-wine.myshopify.com/products/halloween-1" },
-                        { name: "Jack Daniel’s Tennessee Honey Gift Box 1", url: "https://vinea-wine.myshopify.com/products/jack-daniel-s-tennessee-honey-gift-box-1" }
-                    ]
+                    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80"
                 },
                 2: {
                     title: "NOIR PUB Website",
@@ -1494,8 +1547,7 @@
                     title: "Product Landing Page",
                     description: "A high-converting single product landing page designed to present features, benefits, customer reviews, and clear calls to action.",
                     technologies: ["HTML", "CSS", "JavaScript"],
-                    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&auto=format&fit=crop&q=80",
-                    githubUrl: "https://github.com/Monofram-it"
+                    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&auto=format&fit=crop&q=80"
                 }
             };
 
@@ -1517,22 +1569,11 @@
                     actionHtml += `<a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-outline">GitHub Code ↗</a>`;
                 }
 
-                actionHtml += '</div>';
-
-                if (project.products && project.products.length > 0) {
-                    actionHtml += `
-                        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color);">
-                            <h4 style="font-size: 13px; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 10px;">Direct Store Product Links:</h4>
-                            <div style="display: flex; flex-direction: column; gap: 8px;">
-                                ${project.products.map(p => `
-                                    <a href="${p.url}" target="_blank" rel="noopener" style="color: var(--text-main); font-size: 13px; text-decoration: underline;">
-                                        ↗ ${p.name}
-                                    </a>
-                                `).join('')}
-                            </div>
-                        </div>
-                    `;
+                if (!project.demoUrl && !project.githubUrl) {
+                    actionHtml += `<span class="status-badge">Project details available upon request</span>`;
                 }
+
+                actionHtml += '</div>';
 
                 modalBody.innerHTML = `
                     <div class="modal-media">
@@ -1586,7 +1627,7 @@
                     e.preventDefault();
                     const name = document.getElementById('name').value.trim();
                     
-                    formFeedback.textContent = `Thank you, ${name}! Your message has been prepared. (Direct contact: anna.grigoryann331@mail.ru).`;
+                    formFeedback.textContent = `Thank you, ${name}! Your message has been prepared. (Direct email: anna.grigoryann331@gmail.com).`;
                     formFeedback.className = 'form-feedback success';
                     formFeedback.style.display = 'block';
                     contactForm.reset();
