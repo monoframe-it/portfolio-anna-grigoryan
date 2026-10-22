@@ -12,14 +12,14 @@
     <style>
         /* Barbershop-inspired Dark Luxury Color Scheme */
         :root {
-            --bg-color: #111111;
-            --panel-color: #1C1C1C;
+            --bg-color: #0E0E0F;
+            --panel-color: #161618;
             --text-main: #F5F0E8;
-            --text-muted: #A5A5A5;
-            --accent-gold: #B58A55;
-            --accent-gold-hover: #D4AB76;
-            --border-color: #ffffff16;
-            --border-gold: rgba(181, 138, 85, 0.4);
+            --text-muted: #A8A8A8;
+            --accent-gold: #C59B63;
+            --accent-gold-hover: #E0B880;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(197, 155, 99, 0.35);
             --transition: all 0.3s ease;
             --font-heading: 'Oswald', sans-serif;
             --font-sans: 'DM Sans', sans-serif;
@@ -158,7 +158,7 @@
 
         .btn-outline:hover {
             color: var(--accent-gold);
-            background: rgba(181, 138, 85, 0.08);
+            background: rgba(197, 155, 99, 0.08);
             border-color: var(--accent-gold);
             transform: translateY(-2px);
         }
@@ -188,7 +188,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            background: rgba(17, 17, 17, 0.92);
+            background: rgba(14, 14, 15, 0.92);
             backdrop-filter: blur(18px);
             border-bottom: 1px solid var(--border-color);
         }
@@ -261,15 +261,15 @@
             background-color: var(--text-main);
         }
 
-        /* Hero */
+        /* Enhanced Hero Section */
         .hero-section {
             position: relative;
             min-height: 90vh;
             display: flex;
             align-items: center;
-            padding-top: 130px;
+            padding-top: 140px;
             padding-bottom: 90px;
-            background: radial-gradient(circle at 50% 20%, rgba(181, 138, 85, 0.08) 0%, rgba(17, 17, 17, 0) 70%);
+            background: radial-gradient(circle at 50% 30%, rgba(197, 155, 99, 0.12) 0%, rgba(14, 14, 15, 1) 75%);
         }
 
         .hero-container {
@@ -282,14 +282,15 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 8px 20px;
-            background: var(--panel-color);
-            border: 1px solid var(--border-color);
+            padding: 8px 22px;
+            background: rgba(22, 22, 24, 0.8);
+            border: 1px solid var(--border-gold);
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
             color: var(--accent-gold);
             margin-bottom: 30px;
+            backdrop-filter: blur(10px);
         }
 
         .hero-badge .dot {
@@ -297,6 +298,7 @@
             height: 6px;
             background-color: var(--accent-gold);
             border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-gold);
         }
 
         .hero-title {
@@ -318,7 +320,7 @@
             font-family: var(--font-heading);
             color: var(--accent-gold);
             font-size: 22px;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-bottom: 40px;
         }
@@ -589,16 +591,6 @@
             border-top: 1px solid var(--border-color);
         }
 
-        .status-badge {
-            font-size: 10px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 8px 14px;
-            border: 1px solid var(--border-color);
-        }
-
         /* Video Showcase Section */
         .video-showcase-grid {
             display: grid;
@@ -789,7 +781,7 @@
         }
 
         .form-feedback.success {
-            background: rgba(181, 138, 85, 0.15);
+            background: rgba(197, 155, 99, 0.15);
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
         }
@@ -1028,7 +1020,7 @@
         <section id="home" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-badge">
-                    <span class="dot"></span> Yerevan, Armenia · Monofram-it Portfolio
+                    <span class="dot"></span> Yerevan, Armenia
                 </div>
                 <h1 class="hero-title">
                     Hi, I’m Anna — a <span class="gold-text">Shopify Developer</span> & Web Designer.
@@ -1200,20 +1192,19 @@
                     <!-- Project 1 -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80" alt="Vinea - Shopify Store">
+                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80" alt="Alco Premium Spirits - Shopify Store">
                             <span class="project-badge">Shopify</span>
                         </div>
                         <div class="project-content">
-                            <h3>Vinea — Shopify E-commerce Store</h3>
-                            <p>A premium wine e-commerce storefront concept featuring curated collections, product pages, and elegant visual design.</p>
+                            <h3>Alco Premium Spirits — Shopify Store</h3>
+                            <p>A premium spirit e-commerce storefront concept featuring curated collections, product pages, and elegant visual design.</p>
                             <div class="project-tech">
                                 <span>Shopify</span>
                                 <span>Liquid</span>
                                 <span>HTML/CSS</span>
                             </div>
                             <div class="project-actions">
-                                <button class="btn btn-sm btn-outline view-details-btn" data-id="1">Details</button>
-                                <span class="status-badge">Development Phase</span>
+                                <button class="btn btn-sm btn-outline view-details-btn" data-id="1">Details ↗</button>
                             </div>
                         </div>
                     </div>
@@ -1263,7 +1254,7 @@
                     <!-- Project 4 -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&auto=format&fit=crop&q=80" alt="Product Landing Page">
+                            <img src="https://cdn.shopify.com/s/files/1/0793/5787/0220/files/f18a6a29-f6b2-4c56-87b2-333a2eb30896_image.png?v=1792694974" alt="Product Landing Page">
                             <span class="project-badge">Landing Page</span>
                         </div>
                         <div class="project-content">
@@ -1275,8 +1266,7 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-actions">
-                                <button class="btn btn-sm btn-outline view-details-btn" data-id="4">Details</button>
-                                <span class="status-badge">Coming Soon</span>
+                                <button class="btn btn-sm btn-outline view-details-btn" data-id="4">Details ↗</button>
                             </div>
                         </div>
                     </div>
@@ -1522,8 +1512,8 @@
             // Projects Modal Data
             const projectsData = {
                 1: {
-                    title: "Vinea — Shopify E-commerce Store",
-                    description: "A premium wine e-commerce storefront concept featuring curated collections, product pages, and elegant visual design. Built with Shopify & Liquid.",
+                    title: "Alco Premium Spirits — Shopify Store",
+                    description: "A premium spirit e-commerce storefront concept featuring curated collections, product pages, and elegant visual design. Built with Shopify & Liquid.",
                     technologies: ["Shopify", "Liquid", "HTML", "CSS", "AI-Assisted Development"],
                     image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80"
                 },
@@ -1547,7 +1537,7 @@
                     title: "Product Landing Page",
                     description: "A high-converting single product landing page designed to present features, benefits, customer reviews, and clear calls to action.",
                     technologies: ["HTML", "CSS", "JavaScript"],
-                    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&auto=format&fit=crop&q=80"
+                    image: "https://cdn.shopify.com/s/files/1/0793/5787/0220/files/f18a6a29-f6b2-4c56-87b2-333a2eb30896_image.png?v=1792694974"
                 }
             };
 
@@ -1567,10 +1557,6 @@
 
                 if (project.githubUrl) {
                     actionHtml += `<a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-outline">GitHub Code ↗</a>`;
-                }
-
-                if (!project.demoUrl && !project.githubUrl) {
-                    actionHtml += `<span class="status-badge">Project details available upon request</span>`;
                 }
 
                 actionHtml += '</div>';
