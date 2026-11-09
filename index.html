@@ -281,14 +281,18 @@
 
         .about-image {
             position: relative;
+            width: 100%;
         }
 
         .about-image img {
             width: 100%;
+            height: auto;
+            max-height: 520px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            object-fit: cover;
-            aspect-ratio: 4/5;
+            object-fit: contain;
+            display: block;
+            background-color: #121212;
         }
 
         .about-content h3 {
@@ -1259,7 +1263,7 @@
                             </div>
                         </div>
                         <div class="contact-detail-item">
-                            <span class="icon">🗣</span>
+                            <span class="icon>🗣</span>
                             <div>
                                 <strong>Languages</strong>
                                 <span>Armenian, English, Russian</span>
@@ -1449,7 +1453,7 @@
             }
 
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modalBackdrop.classList.contains('active')) closeModal();
+                e.key === 'Escape' && modalBackdrop.classList.contains('active') && closeModal();
             });
 
             // Contact Form
